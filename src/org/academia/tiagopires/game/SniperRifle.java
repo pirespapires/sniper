@@ -10,12 +10,16 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public class SniperRifle {
 
 
-    int bulletDamage;
+    private int bulletDamage;
     Representation representation;
     Representation shotline;
     MyLine shot;
-    boolean hasline;
+    private boolean hasline;
     private boolean dead;
+
+    public boolean Hasline() {
+        return hasline;
+    }
 
     public void isDead() {
         if (dead){

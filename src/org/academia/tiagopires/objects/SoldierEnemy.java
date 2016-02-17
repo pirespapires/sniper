@@ -11,9 +11,8 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 public class SoldierEnemy extends Enemy {
 
 
-
     public SoldierEnemy(int health) {
-        super(health,"resources/soldier.png");
+        super(health, "resources/soldier.png");
 
     }
 

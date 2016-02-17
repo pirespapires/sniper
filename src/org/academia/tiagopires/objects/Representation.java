@@ -104,7 +104,7 @@ public class Representation {
     }
 
 
-    public void getOpposite() {
+    public void setOppositeDirection() {
         switch (direction) {
             case 0:
                 this.direction = 1;

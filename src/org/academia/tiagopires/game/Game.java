@@ -63,14 +63,15 @@ public class Game implements MouseHandler {
 
         while (true) {
             Thread.sleep(50);
+            shootWithMouse();
             for (int j = 0; j < gameObjects.length; j++) {
-
-
+                if (counter % 5 == 0 && sniperRifle.Hasline()) {
+                    sniperRifle.deleteShot();
+                }
 
                 if (!(gameObjects[j] instanceof Enemy)) {
                     continue;
                 }
-
                 Enemy enemy = (Enemy) gameObjects[j];
 
                 enemy.changeEnemyDirection();
@@ -80,6 +81,7 @@ public class Game implements MouseHandler {
                     sniperRifle.setDead(true);
                     sniperRifle.isDead();
                 }
+                counter++;
 
                 for (int i = 0; i < gameObjects.length; i++) {
 
@@ -94,29 +96,16 @@ public class Game implements MouseHandler {
                     }
 
                     if (enemy.getRepresentation().contains(enemy1.getRepresentation())) {
-                        // TODO: change getOpposite method name
-                        enemy.getRepresentation().getOpposite();
-                        enemy1.getRepresentation().getOpposite();
+
+                        enemy.getRepresentation().setOppositeDirection();
+                        enemy1.getRepresentation().setOppositeDirection();
                     }
 
                     if (enemy.isDestroyed()) {
                         gameObjects[j] = null;
                     }
-
-
-
-                    if (counter % 10 == 0 && sniperRifle.hasline == true) {
-                        sniperRifle.deleteShot();
-                    }
-
-                    counter++;
-                    shootWithMouse();
-
                 }
-
-
             }
-
         }
     }
 

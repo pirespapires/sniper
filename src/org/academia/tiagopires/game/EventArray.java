@@ -14,13 +14,14 @@ public class EventArray {
         this.gameObjects = gameObjects;
     }
 
-    public void push( GameObject e){
+    public void push(GameObject e) {
 
-        gameObjects[nextIndex]=e;
+        gameObjects[nextIndex] = e;
         nextIndex++;
 
     }
-    public GameObject pop(){
+
+    public GameObject pop() {
         nextIndex--;
         return gameObjects[nextIndex];
     }

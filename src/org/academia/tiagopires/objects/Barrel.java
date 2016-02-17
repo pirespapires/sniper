@@ -15,7 +15,6 @@ public class Barrel extends GameObject implements Destroyable {
     private SoldierEnemy soldierEnemy;
 
 
-
     public Barrel() {
         getRandomType();
         representation = new Representation(barrelType.getPath());

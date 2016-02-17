@@ -12,7 +12,6 @@ public abstract class Enemy extends GameObject implements Destroyable {
     private Representation representation;
 
 
-
     public Enemy(int health, String path) {
         this.health = health;
         representation = new Representation(path);
@@ -64,7 +63,7 @@ public abstract class Enemy extends GameObject implements Destroyable {
 
 
     @Override
-    public void delete()  {
+    public void delete() {
         getRepresentation().deletePicture();
 
 

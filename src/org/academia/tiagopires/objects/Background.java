@@ -19,10 +19,8 @@ public class Background {
     public Background(String path) {
         //Rectangle rectedge = new Rectangle(MARGIN, MARGIN, WIDTH, HEIGHT);
         //rectedge.setColor(Color.YELLOW);
-        picture = new Picture(10,10,path);
+        picture = new Picture(10, 10, path);
         picture.draw();
-
-
 
 
     }
